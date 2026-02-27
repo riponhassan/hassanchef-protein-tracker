@@ -11,13 +11,22 @@ function addFoodToMeal(meal, protein) {
   totalProtein += protein;
   updateUI();
 }
-
 function updateUI() {
   let goal = parseInt(document.getElementById("goal").value);
+
   document.getElementById("totalProtein").innerText = totalProtein + "g";
   document.getElementById("remaining").innerText = Math.max(goal - totalProtein, 0);
+
+  let percent = (totalProtein / goal) * 100;
+
+  let circle = document.getElementById("progressCircle");
+  let circumference = 314; // 2 * π * 50
+
+  let offset = circumference - (percent / 100) * circumference;
+  circle.style.strokeDashoffset = offset;
   generateSuggestions(goal - totalProtein);
 }
+
 
 function generateSuggestions(remaining) {
   let suggestionsDiv = document.getElementById("suggestionsList");
