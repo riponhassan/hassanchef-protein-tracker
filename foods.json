@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Paneer",
+    "serving": "100g",
+    "protein": 20,
+    "calories": 260,
+    "diet": "veg"
+  },
+  {
+    "name": "Soya Chunks",
+    "serving": "50g",
+    "protein": 25,
+    "calories": 170,
+    "diet": "veg"
+  },
+  {
+    "name": "Moong Dal",
+    "serving": "1 cup",
+    "protein": 14,
+    "calories": 212,
+    "diet": "veg"
+  },
+  {
+    "name": "Chicken Tikka",
+    "serving": "100g",
+    "protein": 27,
+    "calories": 180,
+    "diet": "nonveg"
+  },
+  {
+    "name": "Egg",
+    "serving": "1 large",
+    "protein": 6,
+    "calories": 70,
+    "diet": "egg"
+  }
+]
