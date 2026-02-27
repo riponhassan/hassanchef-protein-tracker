@@ -49,18 +49,23 @@
   </div>
 
   <div class="analytics">
-    <div class="progress-card">
-      <h3>Daily Progress</h3>
-      <div class="progress-ring">
-        <span id="totalProtein">0g</span>
-      </div>
-      <p>Remaining: <span id="remaining">120</span>g</p>
-    </div>
-
-    <div class="suggestions">
-      <h3>Smart Suggestions</h3>
-      <div id="suggestionsList"></div>
-    </div>
+ <div class="progress-card">
+  <h3>Daily Progress</h3>
+  <div class="circle">
+    <svg width="120" height="120">
+      <circle cx="60" cy="60" r="50" stroke="#eee" stroke-width="10" fill="none"/>
+      <circle id="progressCircle" cx="60" cy="60" r="50"
+        stroke="#7b1e3a"
+        stroke-width="10"
+        fill="none"
+        stroke-dasharray="314"
+        stroke-dashoffset="314"
+        stroke-linecap="round"/>
+    </svg>
+    <div class="circle-text" id="totalProtein">0g</div>
+  </div>
+  <p>Remaining: <span id="remaining">120</span>g</p>
+ </div>
   </div>
 
 </div>
