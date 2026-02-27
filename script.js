@@ -1,5 +1,13 @@
 let totalProtein = 0;
 let mealData = {
+  let foods = [];
+fetch("foods.json")
+  .then(response => response.json())
+  .then(data => {
+    foods = data;
+    console.log("Foods loaded:", foods);
+  })
+  .catch(error => console.error("Error loading foods:", error));
   breakfast: 0,
   lunch: 0,
   snacks: 0,
