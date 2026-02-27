@@ -19,11 +19,16 @@ function updateUI() {
 
   let percent = (totalProtein / goal) * 100;
 
-  let circle = document.getElementById("progressCircle");
-  let circumference = 314; // 2 * π * 50
+let circle = document.getElementById("progressCircle");
+let circumference = 314;
 
+// If protein is 0, hide progress completely
+if (percent <= 0) {
+  circle.style.strokeDashoffset = 314;
+} else {
   let offset = circumference - (percent / 100) * circumference;
   circle.style.strokeDashoffset = offset;
+}
   generateSuggestions(goal - totalProtein);
 }
 
