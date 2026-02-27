@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HassanChef Protein Planner</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="topbar">
+  <h1>HassanChef Protein Planner</h1>
+  <div class="goal-box">
+    Goal: <input type="number" id="goal" value="120"> g
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="meals">
+    <div class="meal-card" id="breakfast">
+      <h2>Breakfast</h2>
+      <div class="items"></div>
+      <button onclick="openFoodSelector('breakfast')">+ Add Food</button>
+      <div class="subtotal">Protein: <span>0</span>g</div>
+    </div>
+
+    <div class="meal-card" id="lunch">
+      <h2>Lunch</h2>
+      <div class="items"></div>
+      <button onclick="openFoodSelector('lunch')">+ Add Food</button>
+      <div class="subtotal">Protein: <span>0</span>g</div>
+    </div>
+
+    <div class="meal-card" id="snacks">
+      <h2>Snacks</h2>
+      <div class="items"></div>
+      <button onclick="openFoodSelector('snacks')">+ Add Food</button>
+      <div class="subtotal">Protein: <span>0</span>g</div>
+    </div>
+
+    <div class="meal-card" id="dinner">
+      <h2>Dinner</h2>
+      <div class="items"></div>
+      <button onclick="openFoodSelector('dinner')">+ Add Food</button>
+      <div class="subtotal">Protein: <span>0</span>g</div>
+    </div>
+  </div>
+
+  <div class="analytics">
+    <div class="progress-card">
+      <h3>Daily Progress</h3>
+      <div class="progress-ring">
+        <span id="totalProtein">0g</span>
+      </div>
+      <p>Remaining: <span id="remaining">120</span>g</p>
+    </div>
+
+    <div class="suggestions">
+      <h3>Smart Suggestions</h3>
+      <div id="suggestionsList"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
